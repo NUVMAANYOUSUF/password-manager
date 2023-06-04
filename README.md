@@ -32,7 +32,26 @@ The Password Manager is a secure and convenient tool to store and manage your pa
 
 # Usage
 
+   python password_manager.py
+
 Run the password manager:
 
-   ```shell
-   python password_manager.py
+    Follow the on-screen instructions to choose an option:
+
+    Save Password: Enter the URL, username, and password when prompted to save a new password.
+    Load Password: Enter the encryption key and follow the instructions to decrypt and view stored passwords.
+
+Note: Make sure to remember your encryption key and keep it secure.
+
+    Exit the password manager when finished.
+
+Security Considerations
+
+    Choose a strong encryption key and keep it secure. Avoid using easily guessable or common passwords.
+    Regularly back up your encrypted password data to prevent loss or damage.
+    Keep your system and dependencies up to date with the latest security patches.
+    Be cautious while entering your encryption key and ensure no one is monitoring your input.
+
+Contributing
+
+Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
