@@ -3,6 +3,7 @@ from cryptography.fernet import Fernet
 import os.path
 
 KEY_FILE = "encryption_key.txt"
+PASSWORD_FILE = "password_set.txt"
 
 def generate_key():
     key = Fernet.generate_key()
@@ -50,7 +51,39 @@ def load_password(key):
             passwords.append((url, username, encrypted_password))
     return passwords
 
+def set_password(password):
+    hashed_password = hashlib.sha256(password.encode()).hexdigest()
+    with open(PASSWORD_FILE, 'w') as file:
+        file.write(hashed_password)
+
+def check_password(password):
+    hashed_password = hashlib.sha256(password.encode()).hexdigest()
+    with open(PASSWORD_FILE, 'r') as file:
+        stored_password = file.read().strip()
+    return hashed_password == stored_password
+
+def ask_password():
+    while True:
+        password = input("Set the password: ")
+        confirm_password = input("Confirm the password: ")
+        if password == confirm_password:
+            set_password(password)
+            print("Password set successfully!")
+            break
+        else:
+            print("Passwords do not match. Please try again.")
+
 def main():
+    if not os.path.exists(PASSWORD_FILE):
+        ask_password()
+    else:
+        while True:
+            password = input("Enter the password: ")
+            if check_password(password):
+                break
+            else:
+                print("Invalid password. Please try again.")
+
     while True:
         print("Options:")
         print("1. Save password")
