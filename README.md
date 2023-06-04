@@ -34,7 +34,7 @@ The Password Manager is a secure and convenient tool to store and manage your pa
 
 Run the password manager:
 
-    ```shell
+   
     python password_manager.py
     Follow the on-screen instructions to choose an option:
 
