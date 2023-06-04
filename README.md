@@ -31,8 +31,8 @@ The Password Manager is a secure and convenient tool to store and manage your pa
     pip install -r requirements.txt
 
 # Usage
-
-   python password_manager.py
+   
+   ```python password_manager.py```
 
 Run the password manager:
 
