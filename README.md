@@ -51,7 +51,3 @@ Security Considerations
     Regularly back up your encrypted password data to prevent loss or damage.
     Keep your system and dependencies up to date with the latest security patches.
     Be cautious while entering your encryption key and ensure no one is monitoring your input.
-
-Contributing
-
-Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
